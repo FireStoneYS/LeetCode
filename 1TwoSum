@@ -1,0 +1,20 @@
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        std::vector<int> vector_num;
+        for(size_t i = 0; i < nums.size();i++){
+            bool flag = false;
+            int a = nums[i];
+            int b = target - a;
+            for(size_t j = 1;j < nums.size();j++){
+                if( b == nums[j]){
+                    flag = true;
+                    vector_num.push_back(i);
+                    vector_num.push_back(j);
+                }
+            }
+            if(flag == true)
+                return vector_num;
+        }
+    }
+};
